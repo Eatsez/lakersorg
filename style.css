@@ -612,13 +612,14 @@ area:hover {
 }
 
 .sitemap-links a {
-    color: #FDB927;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .sitemap-links a:hover {
-    color: white;
+    color: #FDB927;
 }
 
 /* Multiple backgrounds for contact page */
