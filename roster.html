@@ -98,43 +98,15 @@
     <div class="container mt-4">
         <h2>2023-24 Lakers Team</h2>
         <div class="team-photo-container">
-            <img src="lakers-team.jpg" alt="Lakers Team Photo" class="team-photo" usemap="#teamMap">
-            <map name="teamMap">
-                <!-- Luka Doncic -->
-                <area shape="rect" coords="0,0,200,400" 
-                      href="https://en.wikipedia.org/wiki/Luka_Don%C4%8Di%C4%87" 
-                      alt="Luka Doncic" 
-                      title="Luka Doncic #77"
-                      target="_blank">
-                
-                <!-- Austin Reaves -->
-                <area shape="rect" coords="200,0,400,400" 
-                      href="https://en.wikipedia.org/wiki/Austin_Reaves" 
-                      alt="Austin Reaves" 
-                      title="Austin Reaves #15"
-                      target="_blank">
-                
-                <!-- LeBron James -->
-                <area shape="rect" coords="400,0,600,400" 
-                      href="https://en.wikipedia.org/wiki/LeBron_James" 
-                      alt="LeBron James" 
-                      title="LeBron James #23"
-                      target="_blank">
-                
-                <!-- Rui Hachimura -->
-                <area shape="rect" coords="600,0,800,400" 
-                      href="https://en.wikipedia.org/wiki/Rui_Hachimura" 
-                      alt="Rui Hachimura" 
-                      title="Rui Hachimura #28"
-                      target="_blank">
-                
-                <!-- Jaxson Hayes -->
-                <area shape="rect" coords="800,0,1000,400" 
-                      href="https://en.wikipedia.org/wiki/Jaxson_Hayes" 
-                      alt="Jaxson Hayes" 
-                      title="Jaxson Hayes #11"
-                      target="_blank">
-            </map>
+            <img src="lakers-team.jpg" alt="Lakers Team Photo" class="team-photo">
+            <!-- Clickable areas overlaid on the image -->
+            <div class="player-areas">
+                <a href="https://en.wikipedia.org/wiki/Luka_Don%C4%8Di%C4%87" class="player-area" target="_blank" title="Luka Doncic #77"></a>
+                <a href="https://en.wikipedia.org/wiki/Austin_Reaves" class="player-area" target="_blank" title="Austin Reaves #15"></a>
+                <a href="https://en.wikipedia.org/wiki/LeBron_James" class="player-area" target="_blank" title="LeBron James #23"></a>
+                <a href="https://en.wikipedia.org/wiki/Rui_Hachimura" class="player-area" target="_blank" title="Rui Hachimura #28"></a>
+                <a href="https://en.wikipedia.org/wiki/Jaxson_Hayes" class="player-area" target="_blank" title="Jaxson Hayes #11"></a>
+            </div>
         </div>
         <p class="text-center mt-3" style="color: #FDB927;">Click on any player to learn more about them on Wikipedia</p>
     </div>
@@ -252,27 +224,31 @@
         display: block;
     }
 
-    /* Add visual feedback for image map areas */
-    area {
-        cursor: pointer;
-        outline: none;
+    .player-areas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
     }
 
-    /* Add hover effect to show active areas */
-    area:hover {
-        outline: 2px solid #FDB927;
+    .player-area {
+        flex: 1;
+        height: 100%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .player-area:hover {
+        background-color: rgba(253, 185, 39, 0.2); /* Lakers gold with transparency */
     }
 
     /* Mobile-specific styles */
     @media (max-width: 768px) {
-        .team-photo-container {
-            max-width: 100%;
-        }
-        
-        area {
-            /* Increase touch target size on mobile */
-            min-width: 44px;
-            min-height: 44px;
+        .player-area {
+            min-height: 44px; /* Minimum touch target size */
         }
     }
     </style>
