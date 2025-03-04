@@ -98,20 +98,42 @@
     <div class="container mt-4">
         <h2>2023-24 Lakers Team</h2>
         <div class="team-photo-container">
-            <!-- Team photo na may clickable areas papunta sa Wikipedia ng players -->
-            <img src="lakers-team.jpg" alt="Lakers Team 2023-24" usemap="#team-map" class="team-photo">
-            <map name="team-map">
-                <!-- Coordinates ng clickable areas para sa bawat player -->
-                <!-- Kada area ay linked sa Wikipedia page ng player -->
-                <area target="_blank" alt="Luka Doncic" title="Luka Doncic" href="https://en.wikipedia.org/wiki/Luka_Don%C4%8Di%C4%87" coords="36,14,244,759" shape="rect">
+            <img src="lakers-team.jpg" alt="Lakers Team Photo" class="team-photo" usemap="#teamMap">
+            <map name="teamMap">
+                <!-- Luka Doncic -->
+                <area shape="rect" coords="0,0,200,400" 
+                      href="https://en.wikipedia.org/wiki/Luka_Don%C4%8Di%C4%87" 
+                      alt="Luka Doncic" 
+                      title="Luka Doncic #77"
+                      target="_blank">
                 
-                <area target="_blank" alt="Austin Reaves" title="Austin Reaves" href="https://en.wikipedia.org/wiki/Austin_Reaves" coords="268,25,476,770" shape="rect">
+                <!-- Austin Reaves -->
+                <area shape="rect" coords="200,0,400,400" 
+                      href="https://en.wikipedia.org/wiki/Austin_Reaves" 
+                      alt="Austin Reaves" 
+                      title="Austin Reaves #15"
+                      target="_blank">
                 
-                <area target="_blank" alt="LeBron James" title="LeBron James" href="https://en.wikipedia.org/wiki/LeBron_James" coords="489,8,708,772" shape="rect">
+                <!-- LeBron James -->
+                <area shape="rect" coords="400,0,600,400" 
+                      href="https://en.wikipedia.org/wiki/LeBron_James" 
+                      alt="LeBron James" 
+                      title="LeBron James #23"
+                      target="_blank">
                 
-                <area target="_blank" alt="Rui Hachimura" title="Rui Hachimura" href="https://en.wikipedia.org/wiki/Rui_Hachimura" coords="693,10,912,774" shape="rect">
+                <!-- Rui Hachimura -->
+                <area shape="rect" coords="600,0,800,400" 
+                      href="https://en.wikipedia.org/wiki/Rui_Hachimura" 
+                      alt="Rui Hachimura" 
+                      title="Rui Hachimura #28"
+                      target="_blank">
                 
-                <area target="_blank" alt="Jaxson Hayes" title="Jaxson Hayes" href="https://en.wikipedia.org/wiki/Jaxson_Hayes" coords="721,5,940,769" shape="rect">
+                <!-- Jaxson Hayes -->
+                <area shape="rect" coords="800,0,1000,400" 
+                      href="https://en.wikipedia.org/wiki/Jaxson_Hayes" 
+                      alt="Jaxson Hayes" 
+                      title="Jaxson Hayes #11"
+                      target="_blank">
             </map>
         </div>
         <p class="text-center mt-3" style="color: #FDB927;">Click on any player to learn more about them on Wikipedia</p>
@@ -215,5 +237,44 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+    .team-photo-container {
+        position: relative;
+        max-width: 1000px;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    .team-photo {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Add visual feedback for image map areas */
+    area {
+        cursor: pointer;
+        outline: none;
+    }
+
+    /* Add hover effect to show active areas */
+    area:hover {
+        outline: 2px solid #FDB927;
+    }
+
+    /* Mobile-specific styles */
+    @media (max-width: 768px) {
+        .team-photo-container {
+            max-width: 100%;
+        }
+        
+        area {
+            /* Increase touch target size on mobile */
+            min-width: 44px;
+            min-height: 44px;
+        }
+    }
+    </style>
 </body>
 </html>
