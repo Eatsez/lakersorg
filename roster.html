@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags at links para sa webpage -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakers Team Roster</title>
+    <link rel="icon" type="image/gif" href="lakerslogo.gif">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Empty navbar (placeholder lang to) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">   
+        </div>
+    </nav>
+
+    <!-- FEATURE: CSS Navigation Bar & CSS Dropdowns -->
+    <!-- FEATURE: Drop down (navigation bar) menu -->
+    <!-- Main navigation bar - Fixed sa taas ng page -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Lakers logo na clickable papunta sa home page -->
+            <a class="navbar-brand" href="index.html">
+                <img src="lakerslogo.gif" alt="Lakers Logo" height="40">
+            </a>
+
+            <!-- burger button para sa mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation menu items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <!-- Dropdown menu para sa lahat ng pages -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <!-- Lahat ng pages na pwedeng puntahan -->
+                            <li><a class="dropdown-item" href="index.html">Home</a></li>
+                            <li><a class="dropdown-item" href="roster.html">Team Roster</a></li>
+                            <li><a class="dropdown-item" href="achievements.html">Achievements</a></li>
+                            <li><a class="dropdown-item" href="schedule.html">Game Schedule</a></li>
+                            <li><a class="dropdown-item" href="news.html">News</a></li>
+                            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                            <li><a class="dropdown-item" href="fan-zone.html">Fan Zone</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FEATURE: CSS float & CSS Rounded Corners -->
+    <!-- FEATURE: Animated Images (fadeIn animation on cards) -->
+    <!-- Starting 5 section - Main players ng team -->
+    <div class="container text-center">
+        <h1>Lakers Starting 5</h1>
+        <div class="roster-container">
+            <!-- FEATURE: Pop up image (lightbox) using Bootstrap modal -->
+            <!-- FEATURE: CSS Shadow effects & CSS Opacity in player cards -->
+            <div class="player-card" data-bs-toggle="modal" data-bs-target="#playerModal" data-player="lebron">
+                <img src="lebron.png" alt="LeBron James">
+                <h3>LeBron James</h3>
+                <p>Forward | 6'9" | 250 lbs</p>
+            </div>
+            <div class="player-card" data-bs-toggle="modal" data-bs-target="#playerModal" data-player="luka">
+                <img src="lukaa.png" alt="Luka Doncic">
+                <h3>Luka Doncic</h3>
+                <p>Forward | 6'10" | 253 lbs</p>
+            </div>
+            <div class="player-card" data-bs-toggle="modal" data-bs-target="#playerModal" data-player="austin">
+                <img src="austin.png" alt="Austin Reaves">
+                <h3>Austin Reaves</h3>
+                <p>Guard | 6'3" | 200 lbs</p>
+            </div>
+            <div class="player-card" data-bs-toggle="modal" data-bs-target="#playerModal" data-player="rui">
+                <img src="rui.png" alt="Rui Hachimura">
+                <h3>Rui Hachimura</h3>
+                <p>Forward | 6'10" | 253 lbs</p>
+            </div>
+            <div class="player-card" data-bs-toggle="modal" data-bs-target="#playerModal" data-player="jaxon">
+                <img src="jaxon.png" alt="Jaxon Hayes">
+                <h3>Jaxon Hayes</h3>
+                <p>Forward | 6'10" | 253 lbs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FEATURE: Image Map -->
+    <!-- Team Photo section with image mapping -->
+    <div class="container mt-4">
+        <h2>2023-24 Lakers Team</h2>
+        <div class="team-photo-container">
+            <!-- Team photo na may clickable areas papunta sa Wikipedia ng players -->
+            <img src="lakers-team.jpg" alt="Lakers Team 2023-24" usemap="#team-map" class="team-photo">
+            <map name="team-map">
+                <!-- Coordinates ng clickable areas para sa bawat player -->
+                <!-- Kada area ay linked sa Wikipedia page ng player -->
+                <area target="" alt="" title="" href="https://en.wikipedia.org/wiki/Luka_Don%C4%8Di%C4%87" coords="36,14,244,759" shape="rect">
+                
+                <area target="" alt="" title="" href="https://en.wikipedia.org/wiki/Austin_Reaves" coords="268,25,476,770" shape="rect">
+                
+                <area target="" alt="" title="" href="https://en.wikipedia.org/wiki/LeBron_James" coords="708,772,489,8" shape="rect">
+                
+                <area target="" alt="" title="" href="https://en.wikipedia.org/wiki/Rui_Hachimura" coords="912,774,693,10" shape="rect">
+                
+                <area target="" alt="" title="" href="https://en.wikipedia.org/wiki/Jaxson_Hayes" coords="940,769,721,5" shape="rect">
+            </map>
+        </div>
+        <p class="text-center mt-3" style="color: #FDB927;">Click on any player to learn more about them on Wikipedia</p>
+    </div>
+
+    <!-- Site Map -->
+    <div class="container sitemap">
+        <h3>Site Map</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="sitemap-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="roster.html">Team Roster</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="fan-zone.html">Fan Zone</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- FEATURE: CSS Colors (rgba) applied via footer class -->
+    <footer class="footer">
+        <p>Francis Cedric T. Punzalan</p>
+        <p>2025</p>
+    </footer>
+
+    <!-- FEATURE: Pop up image (lightbox) modal implementation -->
+    <div class="modal fade" id="playerModal" tabindex="-1" aria-labelledby="playerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="playerModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="playerModalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for player details modal -->
+    <script>
+        // Player information database
+        const players = {
+            // Details ng bawat player (stats, info, etc.)
+            lebron: {
+                name: "LeBron James",
+                position: "Forward",
+                height: "6'9\"",
+                weight: "250 lbs",
+                info: "A legendary forward known for his versatility, leadership, and multiple NBA championships."
+            },
+            luka: {
+                name: "Luka Doncic",
+                position: "Forward",
+                height: "6'10\"",
+                weight: "253 lbs",
+                info: "A dynamic playmaker with elite scoring and passing abilities, making an impact in every game."
+            },
+            austin: {
+                name: "Austin Reaves",
+                position: "Guard",
+                height: "6'3\"",
+                weight: "200 lbs",
+                info: "A skilled guard known for his shooting, playmaking, and hustle on both ends of the court."
+            },
+            rui: {
+                name: "Rui Hachimura",
+                position: "Forward",
+                height: "6'10\"",
+                weight: "253 lbs",
+                info: "A strong and athletic forward who excels in mid-range scoring and defensive versatility."
+            },
+            jaxon: {
+                name: "Jaxon Hayes",
+                position: "Forward",
+                height: "6'10\"",
+                weight: "253 lbs",
+                info: "An athletic big man with shot-blocking ability and a strong presence in the paint."
+            }
+        };
+        
+        // Event listener para sa player cards
+        // Nagttrigger to pag clinick ang card para lumabas ang modal
+        document.querySelectorAll('.player-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const player = players[this.getAttribute('data-player')];
+                document.getElementById('playerModalLabel').textContent = player.name;
+                document.getElementById('playerModalBody').innerHTML = `
+                    <p><strong>Position:</strong> ${player.position}</p>
+                    <p><strong>Height:</strong> ${player.height}</p>
+                    <p><strong>Weight:</strong> ${player.weight}</p>
+                    <p>${player.info}</p>
+                `;
+            });
+        });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

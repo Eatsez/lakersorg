@@ -1,0 +1,841 @@
+/* Para sa buong webpage background at font */
+html {
+    height: 100%;
+    background: linear-gradient(135deg, #552583, #FDB927) fixed; /* Lakers colors  gradient */
+}
+
+/* Styling ng body para organized tingnan */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(228, 208, 208);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 2s ease-in-out;
+    background: transparent; /* Para makita yung gradient sa background */
+}
+
+/* Navbar styles para maganda tingnan */
+.navbar {
+    background-color: rgba(85, 37, 131, 0.9);
+}
+.navbar a {
+    color: white;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+.navbar a:hover {
+    color: #FDB927; /* Palit kulay kapag hinover */
+}
+
+/* Full-screen welcome section para sa landing page */
+.full-screen {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.full-screen h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+    z-index: 2; /* Ensure text is above background */
+}
+
+.full-screen p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+    z-index: 2; /* Ensure text is above background */
+}
+
+/* Main content container */
+.content {
+    flex: 1; /* Allow content to grow */
+    padding: 20px;
+}
+
+/* Adjust the spacing for the content after welcome section */
+#content {
+    margin-top: 0; /* Remove top margin */
+    padding-top: 50px;
+}
+
+/* Footer styling para sa bottom ng page */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(85, 37, 131, 0.9); /* Lakers purple na medyo transparent */
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
+
+/* Button styling */
+.btn-lakers {
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    background-color: #FDB927;
+    color: #552583;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeInUp 2s ease-in-out;
+    z-index: 2; /* Ensure button is above background */
+}
+
+.btn-lakers:hover {
+    background-color: #552583;
+    color: #FDB927;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.player-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.roster-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.player-card {
+    background: rgba(85, 37, 131, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+}
+
+.player-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #FDB927;
+}
+
+.modal-content {
+    background-color: rgba(85, 37, 131, 0.9);
+    border: 2px solid #FDB927;
+}
+
+.modal-body {
+    padding: 0;
+    position: relative;
+}
+
+.btn-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    background-color: #FDB927;
+    opacity: 0.8;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+#modalImage {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Achievements Section */
+.achievements-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.achievement-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.achievement-card:hover {
+    transform: scale(1.05);
+}
+
+.achievement-card img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: gold;
+}
+
+/* Additional Animations */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Additional styles for achievements page */
+p {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 20px;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Schedule Page Styles */
+.schedule-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.game-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #FDB927;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px gold;
+}
+
+.game-card h2 {
+    color: #FDB927;
+    font-size: 22px;
+}
+
+.game-card p {
+    font-size: 18px;
+    color: white;
+}
+
+/* News Page Styles */
+.news-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 0;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item h2 {
+    color: #FDB927;
+    font-size: 22px;
+}
+
+.news-item p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.news-item a {
+    color: #FDB927;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* Container para sa content */
+.container {
+    max-width: 1400px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1); /* Medyo transparent na container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 217, 0, 0.5); /* Glowing effect sa edges */
+    animation: fadeIn 1s ease-in-out;
+    flex-grow: 1;
+}
+
+/* Gallery container with multiple backgrounds */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    background: 
+        linear-gradient(rgba(85, 37, 131, 0.3), rgba(85, 37, 131, 0.3)),
+        url('images/kobe.jpg') right bottom no-repeat,
+        url('images/lebron.jpg') left top no-repeat;
+    background-size: 
+        cover,
+        200px auto,
+        200px auto;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 217, 0, 0.5);
+}
+
+/* Keep existing gallery styles */
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.gallery img {
+    width: calc(33.333% - 14px);
+    height: 400px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Gallery specific headings */
+.gallery-heading {
+    text-align: center;
+    color: #FDB927;
+    font-weight: bold;
+    margin: 30px 0;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Fan Zone Page Styles */
+.comment-section {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.comment-box {
+    margin-bottom: 20px;
+}
+
+.comment {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Fan Zone specific container */
+.fan-zone-container {
+    flex: 1;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fan Zone headings */
+.fan-zone-heading {
+    color: #FDB927;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Comment form styles */
+.comment-form input,
+.comment-form textarea {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #FDB927;
+    color: #333;
+}
+
+.comment-form button {
+    background-color: #FDB927;
+    color: #552583;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.comment-form button:hover {
+    transform: scale(1.05);
+    background-color: #552583;
+    color: #FDB927;
+}
+
+/* Contact Page Styles */
+.contact-info {
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+/* Contact form specific styles */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #FDB927;
+}
+
+.form-control:focus {
+    background-color: white;
+    border-color: #FDB927;
+    box-shadow: 0 0 0 0.25rem rgba(253, 185, 39, 0.25);
+}
+
+.form-label {
+    color: #FDB927;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #FDB927;
+    border-color: #FDB927;
+    color: #552583;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #552583;
+    border-color: #FDB927;
+    color: #FDB927;
+    transform: scale(1.05);
+}
+
+/* Carousel styling */
+.carousel {
+    width: 100%;
+    max-width: 1280px; /* Match your image width */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Para sa mga iframe (YouTube at Maps) */
+iframe {
+    max-width: 100%;
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Para centered lahat ng videos at maps */
+}
+
+/* Container for iframes to ensure proper centering */
+.iframe-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Center headings for iframes sections */
+.iframe-container h2,
+.video-section h2,
+.map-section h2,
+h2 {  /* Added general h2 selector to catch all */
+    text-align: center;
+    color: #FDB927;
+    margin: 30px 0;
+    font-weight: bold;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Center any text within these sections */
+.iframe-container,
+.video-section,
+.map-section {
+    text-align: center;
+    width: 100%;
+}
+
+/* Make sure all containers are transparent */
+.container, 
+.content,
+.full-screen,
+main,
+section {
+    background: none !important;
+}
+
+/* Make ALL possible containers transparent */
+.container, 
+.content,
+.full-screen,
+main,
+section,
+.gallery-container,
+.gallery,
+.gallery-heading,
+
+
+/* Para sa lahat ng div na may "container" o "content" sa class name nila */
+/* Example: "main-container", "side-container", "blog-content", etc. */
+div[class*="container"],
+div[class*="content"] {
+    background: none !important; /* Para transparent lahat ng containers at walang sariling background */
+}
+
+/* Para sa mga Bootstrap classes na may background */
+.bg-light,
+.bg-white,
+.bg-dark,
+[class*="bg-"] {
+    background: none !important; /* Override lahat ng Bootstrap backgrounds para transparent din (youtube)*/
+}
+
+
+/* Pwede rin gamitin sa ibang attributes:
+   div[id*="content"]     -> para sa id
+   div[title*="content"]  -> para sa title
+
+   /* Attribute selectors:
+   *= means "contains" or "kasama sa string"
+   
+/* Para sa team photo image map */
+.team-photo-container {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+}
+
+/* Hover effect para sa players */
+area:hover {
+    cursor: pointer;
+}
+
+/* Table Styles */
+.table {
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #552583;
+    color: #FDB927;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(85, 37, 131, 0.7) !important;
+    color: #FDB927;
+}
+
+/* Sitemap Styles */
+.sitemap {
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid rgba(253, 185, 39, 0.3);
+}
+
+.sitemap h3 {
+    color: #FDB927;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sitemap-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sitemap-links a {
+    color: #FDB927;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sitemap-links a:hover {
+    color: white;
+}
+
+/* Multiple backgrounds for contact page */
+.contact-container {
+    background-image: 
+        linear-gradient(rgba(85, 37, 131, 0.9), rgba(85, 37, 131, 0.9)),
+        url('images/lakers-logo.png'),
+        url('images/crypto.jpg');
+    background-position: 
+        center,
+        right top,
+        left bottom;
+    background-size: 
+        cover,
+        200px auto,
+        300px auto;
+    background-repeat: 
+        no-repeat,
+        no-repeat,
+        no-repeat;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #552583, #FDB927);
+        color: white;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .navbar {
+        background-color: rgba(85, 37, 131, 0.9);
+        transition: background 0.3s;
+    }
+
+    .navbar a {
+        color: white;
+        transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        color: #FDB927;
+    }
+
+    h1 {
+        text-align: center;
+        color: #FDB927;
+        font-weight: bold;
+        font-size: 40px;
+        margin-top: 20px;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .schedule-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 30px;
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .game-card {
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid #FDB927;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .game-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 15px gold;
+    }
+
+    .game-card h2 {
+        color: #FDB927;
+        font-size: 22px;
+    }
+
+    .game-card p {
+        font-size: 18px;
+        color: white;
+    }
+
+    .btn-lakers {
+        background-color: #FDB927;
+        color: #552583;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-lakers:hover {
+        background-color: #552583;
+        color: #FDB927;
+        transform: scale(1.1);
+    }
+
+    .footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #552583;
+        color: white;
+        margin-top: auto;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }   
+
+
+/* News Page Specific Styles - Para sa news.html */
+.news-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 0;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item h2 {
+    color: #FDB927; /* Lakers gold */
+    font-size: 22px;
+}
+
+.news-item p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.news-item a {
+    color: #FDB927;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* Container override para sa news page */
+.container.news-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 217, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    flex-grow: 1;
+}
+
+
+/* Gallery Page Specific Styles - Para sa gallery.html */
+.gallery img {
+    width: 420px; /* Fixed width para sa gallery images */
+    height: 620px; /* Fixed height para sa gallery images */
+    object-fit: cover; /* Para hindi ma-distort yung image */
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+/* Gallery page container styles */
+.container.gallery-container {
+    flex-grow: 1;
+}
+
+/* Gallery headings */
+.gallery-page h1, 
+.gallery-page h2 {
+    text-align: center;
+    color: #FDB927; /* Lakers gold */
+    font-weight: bold;
+}
+
+/* Gallery page specific animation */
+.gallery-page {
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+/* Contact Page Specific Styles - Para sa contact.html */
+.contact-info {
+    margin-top: 20px;
+    flex-grow: 1; /* Para mag-fill yung remaining space sa page */
+}
+
+/* Highlight text para sa contact page */
+.highlight {
+    color: #FDB927; /* Lakers gold */
+}
+
+/* Contact page container styles */
+.container.contact-container {
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
+/* Contact form specific styles */
+.contact-page .form-label {
+    color: white;
+}
+
+.contact-page .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #FDB927;
+    color: white;
+}
+
+.contact-page .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #FDB927;
+    box-shadow: 0 0 0 0.25rem rgba(253, 185, 39, 0.25);
+}
+
+
+
+
