@@ -328,22 +328,38 @@ p {
     box-shadow: 0 0 15px rgba(255, 217, 0, 0.5);
 }
 
-/* Keep existing gallery styles */
+/* Gallery styles */
 .gallery {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     width: 100%;
+    padding: 20px;
 }
 
 .gallery img {
-    width: calc(33.333% - 14px);
-    height: 400px;
+    width: 100%;
+    max-width: 420px;
+    height: 620px;
     object-fit: cover;
-    margin: 0;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    flex: 1 1 300px; /* This makes images flex and maintain aspect ratio */
+}
+
+/* Responsive adjustments for gallery */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: row; /* Keep row layout on mobile */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .gallery img {
+        height: 400px; /* Smaller height on mobile */
+        max-width: 100%;
+    }
 }
 
 /* Gallery specific headings */
